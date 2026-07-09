@@ -1,0 +1,37 @@
+import type { Metadata } from 'next';
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.clearflowplumbingtx.com';
+const url = `${BASE_URL}/service-areas`;
+
+export const metadata: Metadata = {
+  title: 'Plumbing Service Areas | Waco, Hewitt, Killeen, Temple & Central Texas | ClearFlow',
+  description:
+    'ClearFlow Plumbing serves Waco, Hewitt, Woodway, McGregor, China Spring, Bellmead, Killeen, Temple, and all of Central Texas. Flat-rate pricing, same-day service, 1-Year Workmanship Warranty.',
+  keywords: [
+    'plumbing service areas Central Texas',
+    'plumber Waco TX',
+    'plumber Hewitt TX',
+    'plumber Killeen TX',
+    'plumber Temple TX',
+    'ClearFlow Plumbing service areas',
+  ],
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Plumbing Service Areas | ClearFlow Plumbing — Central Texas',
+    description:
+      'Serving Waco and all of Central Texas with flat-rate plumbing repair, panel upgrades, and installation. Same-day service available.',
+    url,
+    siteName: 'ClearFlow Plumbing',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Plumbing Service Areas | ClearFlow Plumbing — Central Texas',
+    description: 'Waco, Temple, Killeen, and surrounding Central Texas — TSBPE-licensed plumbing service.',
+  },
+};
+
+export default function ServiceAreasLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
