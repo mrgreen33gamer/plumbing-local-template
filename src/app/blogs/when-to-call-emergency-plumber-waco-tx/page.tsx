@@ -60,7 +60,7 @@ export default function Page() {
       <BlogHero
         title="When to Call an Emergency Plumber in Waco, TX"
         description="Burst pipes, sewage backups, and no hot water at midnight — know which plumbing problems can wait and which need same-day emergency response."
-        imageSrc="/pages/blogs/ac-replacement.jpg"
+        imageSrc="/pages/blogs/emergency-plumbing.jpg"
         imageAlt="When to call an emergency plumber in Waco Texas"
         category="Emergency Plumbing"
         date="January 22, 2026"

@@ -58,7 +58,7 @@ export default function Page() {
       <BlogHero
         title="Tankless vs. Tank Water Heaters: What Makes Sense for Texas Homes in 2026?"
         description="Compare tankless and traditional tank water heaters for Central Texas homes — upfront cost, energy bills, recovery rates, and which option fits your family."
-        imageSrc="/pages/blogs/heat-pump.jpg"
+        imageSrc="/pages/blogs/water-heater.jpg"
         imageAlt="Tankless vs tank water heater comparison for Texas homes"
         category="Water Heaters"
         date="March 12, 2026"

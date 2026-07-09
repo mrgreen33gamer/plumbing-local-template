@@ -21,7 +21,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Water Heaters',
     date:     'March 12, 2026',
     readTime: 7,
-    imageSrc: '/pages/blogs/heat-pump.jpg',
+    imageSrc: '/pages/blogs/water-heater.jpg',
     imageAlt: 'Tankless vs tank water heater comparison for Texas homes',
     featured: true,
   },
@@ -32,7 +32,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Drain Cleaning',
     date:     'February 18, 2026',
     readTime: 6,
-    imageSrc: '/pages/blogs/hvac-filter.jpg',
+    imageSrc: '/pages/blogs/drain-cleaning.jpg',
     imageAlt: 'Signs you need professional drain cleaning in Waco TX',
   },
   {
@@ -42,7 +42,7 @@ const ALL_POSTS: BlogPost[] = [
     category: 'Emergency Plumbing',
     date:     'January 22, 2026',
     readTime: 5,
-    imageSrc: '/pages/blogs/ac-replacement.jpg',
+    imageSrc: '/pages/blogs/emergency-plumbing.jpg',
     imageAlt: 'When to call an emergency plumber in Waco Texas',
   },
 ];

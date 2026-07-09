@@ -1,44 +1,48 @@
 // src/app/globalVariables.scss
 // ─────────────────────────────────────────────────────────────────────────────
 // ClearFlow Plumbing — Brand Tokens
+// IDENTITY: Clean water editorial — ocean teal on soft aqua paper
 //
-// THREE DISTINCT FONTS:
-//   $titleFont  → Barlow Condensed  — bold condensed display (hero h1, section titles)
-//   $headerFont → Outfit            — clean geometric sans   (nav, card titles, labels, CTAs)
-//   $textFont   → Inter             — refined humanist sans  (body copy, form text, paragraphs)
-//
-// Usage guide:
-//   h1, .hero headline              → $titleFont  (uppercase, tight tracking)
-//   h2, h3, nav links, btn text     → $headerFont (medium weight, normal case)
-//   p, label, input, small text     → $textFont   (regular/medium weight)
+// FONTS (loaded in layout.tsx via next/font):
+//   $titleFont  → Fraunces         — soft serif display (editorial / spa-clean)
+//   $headerFont → Figtree          — friendly rounded UI
+//   $textFont   → Nunito Sans      — open, approachable body
 // ─────────────────────────────────────────────────────────────────────────────
 
-$titleFont:  var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
-$headerFont: var(--font-outfit),           'Outfit',           sans-serif;
-$textFont:   var(--font-inter),            'Inter',            sans-serif;
+$titleFont:  var(--font-title),  'Fraunces',     serif;
+$headerFont: var(--font-header), 'Figtree',      sans-serif;
+$textFont:   var(--font-body),   'Nunito Sans',  sans-serif;
 
-// ── Core Palette ─────────────────────────────────────────────────────────────
+// ── Core Palette — ocean teal + aqua wash ────────────────────────────────────
 $black:      #000000;
-$obsidian:   #0d1b2a;
-$blackflat:  #1a2a3a;
+$obsidian:   #0c4a6e;   // deep ocean (not navy-black)
+$blackflat:  #075985;
 $white:      #FFFFFF;
-$offwhite:   #f8fafc;
+$offwhite:   #f0f9ff;   // soft sky / aqua paper
 
-// Greys (navy-tinted)
-$darkgrey:   #7a9bb5;
-$grey:       #4a6a85;
-$lightgrey:  #c8d8e8;
+// Greys (teal-tinted)
+$darkgrey:   #7dd3fc;
+$grey:       #0369a1;
+$lightgrey:  #e0f2fe;
 
-// Brand Accent — deep blue
-$orange:     #2563eb;
-$lightorange:#3b82f6;
-$darkorange: #1d4ed8;
+// Brand Accent — living teal (token name $orange kept for compat)
+$orange:     #0d9488;
+$lightorange:#14b8a6;
+$darkorange: #0f766e;
+
+// Secondary water blue
+$blue:       #0284c7;
 
 // Legacy aliases
 $green:      $orange;
 $lightgreen: $lightorange;
 $darkgreen:  $darkorange;
-$blue:       #1e6fa8;
+
+// Shape language — soft rounded / pill-friendly
+$radius-sm:  10px;
+$radius-md:  16px;
+$radius-lg:  24px;
+$radius-pill: 999px;
 
 // Error
-$danger-red: #ef4444;
+$danger-red: #e11d48;

@@ -13,8 +13,8 @@ import bcrypt from 'bcryptjs';
 
 const FROM_EMAIL  = process.env.FROM_EMAIL      ?? '';
 const SMTP2GO_KEY = process.env.SMTP2GO_API_KEY ?? '';
-const SITE_URL    = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.clearflowplumbingtx.com';
-const BRAND_NAME  = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'ClearFlow Plumbing';
+const SITE_URL    = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.arcticairhvac.com';
+const BRAND_NAME  = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'Arctic Air HVAC';
 
 // ── Welcome email ─────────────────────────────────────────────────────────────
 function buildWelcomeEmailHtml(name: string, email: string): string {
@@ -40,13 +40,13 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
 
           <!-- Accent bar -->
           <tr>
-            <td style="height:4px;background:linear-gradient(90deg,#2563eb 0%,#2563eb 100%);font-size:0;line-height:0;">&nbsp;</td>
+            <td style="height:4px;background:linear-gradient(90deg,#16def9 0%,#f97316 100%);font-size:0;line-height:0;">&nbsp;</td>
           </tr>
 
           <!-- Header -->
           <tr>
             <td style="padding:36px 40px 12px 40px;">
-              <div style="display:inline-block;padding:6px 12px;border:1px solid rgba(22,222,249,0.35);border-radius:999px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#2563eb;">
+              <div style="display:inline-block;padding:6px 12px;border:1px solid rgba(22,222,249,0.35);border-radius:999px;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#16def9;">
                 Admin Dashboard · Live
               </div>
               <h1 style="margin:18px 0 8px 0;font-size:28px;line-height:1.25;font-weight:700;color:#ffffff;">
@@ -63,7 +63,7 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
             <td style="padding:24px 40px 8px 40px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="border-radius:10px;background:#2563eb;">
+                  <td style="border-radius:10px;background:#f97316;">
                     <a href="${dashboardUrl}"
                        style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:600;color:#0d1b2a;text-decoration:none;border-radius:10px;letter-spacing:0.01em;">
                       Open Your Dashboard →
@@ -72,7 +72,7 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
                 </tr>
               </table>
               <p style="margin:12px 0 0 0;font-size:12px;color:rgba(230,241,230,0.45);">
-                Or visit: <a href="${dashboardUrl}" style="color:#2563eb;text-decoration:none;">${dashboardUrl}</a>
+                Or visit: <a href="${dashboardUrl}" style="color:#16def9;text-decoration:none;">${dashboardUrl}</a>
               </p>
             </td>
           </tr>
@@ -100,7 +100,7 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
                 <tr>
                   <td style="padding:16px 18px;">
                     <span style="display:inline-block;width:80px;font-size:12px;color:rgba(230,241,230,0.55);">Role</span>
-                    <span style="display:inline-block;padding:3px 10px;background:rgba(22,222,249,0.12);border:1px solid rgba(22,222,249,0.3);border-radius:999px;font-size:11px;color:#2563eb;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">Admin</span>
+                    <span style="display:inline-block;padding:3px 10px;background:rgba(22,222,249,0.12);border:1px solid rgba(22,222,249,0.3);border-radius:999px;font-size:11px;color:#16def9;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;">Admin</span>
                   </td>
                 </tr>
               </table>
@@ -116,25 +116,25 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding:0 0 14px 0;font-size:14px;color:rgba(230,241,230,0.85);line-height:1.5;">
-                    <span style="color:#2563eb;font-weight:700;margin-right:8px;">→</span>
+                    <span style="color:#16def9;font-weight:700;margin-right:8px;">→</span>
                     <strong style="color:#ffffff;">Leads</strong> — every form submission with full journey, device, and geo context
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:0 0 14px 0;font-size:14px;color:rgba(230,241,230,0.85);line-height:1.5;">
-                    <span style="color:#2563eb;font-weight:700;margin-right:8px;">→</span>
+                    <span style="color:#16def9;font-weight:700;margin-right:8px;">→</span>
                     <strong style="color:#ffffff;">Sessions</strong> — live visitor tracking with referrer and device breakdown
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:0 0 14px 0;font-size:14px;color:rgba(230,241,230,0.85);line-height:1.5;">
-                    <span style="color:#2563eb;font-weight:700;margin-right:8px;">→</span>
+                    <span style="color:#16def9;font-weight:700;margin-right:8px;">→</span>
                     <strong style="color:#ffffff;">Events</strong> — clicks, phone taps, email taps, form submissions
                   </td>
                 </tr>
                 <tr>
                   <td style="padding:0 0 14px 0;font-size:14px;color:rgba(230,241,230,0.85);line-height:1.5;">
-                    <span style="color:#2563eb;font-weight:700;margin-right:8px;">→</span>
+                    <span style="color:#16def9;font-weight:700;margin-right:8px;">→</span>
                     <strong style="color:#ffffff;">Analytics</strong> — funnel, conversion rate, top pages, journey paths
                   </td>
                 </tr>
@@ -149,7 +149,7 @@ function buildWelcomeEmailHtml(name: string, email: string): string {
                      style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.18);border-radius:10px;">
                 <tr>
                   <td style="padding:14px 16px;font-size:13px;color:rgba(230,241,230,0.72);line-height:1.5;">
-                    <strong style="color:#2563eb;">Security note —</strong>
+                    <strong style="color:#f97316;">Security note —</strong>
                     this email confirms a one-time admin account creation on your site. Only one admin account is permitted, so if you didn't initiate this, please rotate your database credentials immediately.
                   </td>
                 </tr>

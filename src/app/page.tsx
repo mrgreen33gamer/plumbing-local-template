@@ -35,36 +35,42 @@ export default function HomePage() {
       title: "Emergency Plumbing",
       body: "Burst pipes, sewage backups, no water — same-day emergency response 7 days a week. We stop the damage first, then fix it right.",
       link: "/services/emergency-plumbing",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faFire,
       title: "Water Heater Repair & Install",
       body: "Tank and tankless repair, flush, and full replacement. Flat-rate quotes, code-compliant install, hot water restored fast.",
       link: "/services/water-heater-repair-install",
+      image: "/pages/home/services/service-2.jpg",
     },
     {
       icon: faWrench,
       title: "Fixture Installation",
       body: "Sinks, toilets, faucets, disposals, and shower valves — clean installs with proper seals, shutoffs, and no cabinet damage.",
       link: "/services/fixture-installation",
+      image: "/pages/home/services/service-3.jpg",
     },
     {
       icon: faSink,
       title: "Drain Cleaning",
       body: "Snaking and hydro-jetting for sinks, tubs, and main lines. We clear the clog and help keep it from coming back.",
       link: "/services/drain-cleaning",
+      image: "/pages/home/services/service-4.jpg",
     },
     {
       icon: faSearch,
       title: "Leak Detection & Repair",
       body: "Slab leaks, supply-line drips, and hidden moisture found with modern detection — then repaired with minimal disruption.",
       link: "/services/leak-detection-repair",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faToilet,
       title: "Sewer Line Repair",
       body: "Camera inspection, trenchless options when possible, and full dig-and-replace when needed — honest recommendations either way.",
       link: "/services/sewer-line-repair",
+      image: "/pages/home/services/service-2.jpg",
     },
   ];
 
@@ -180,13 +186,19 @@ export default function HomePage() {
 
   return (
     <main className={styles.pageWrapper}>
-
       <WelcomePage />
-
       <TrustBar
         headline="Waco's trusted plumbing company — Licensed Master Plumber, TSBPE, insured, and warrantied on every job"
       />
-
+      <div className={styles.section}>
+        <ServiceCardComponent
+          heading="Complete Plumbing Services for Your Home"
+          cards={services}
+        />
+      </div>
+      <div className={styles.section}>
+        <Testimonials testimonials={reviews} />
+      </div>
       <div className={styles.section}>
         <ImpactMetrics
           title="Numbers That Speak for Us"
@@ -194,14 +206,6 @@ export default function HomePage() {
           cityName="Waco"
         />
       </div>
-
-      <div className={styles.section}>
-        <ServiceCardComponent
-          heading="Complete Plumbing Services for Your Home"
-          cards={services}
-        />
-      </div>
-
       <div className={styles.section}>
         <WhyChooseUs
           cityName="Waco"
@@ -209,7 +213,40 @@ export default function HomePage() {
           title="What Makes ClearFlow Different"
         />
       </div>
-
+      <div className={styles.section}>
+        <ProcessTimeline steps={processSteps} />
+      </div>
+      <div className={styles.section}>
+        <GuaranteeSection />
+      </div>
+      <CTABanner
+        headline="Burst Pipe? Clogged Drain? We're Ready Right Now."
+        subline="Same-day appointments across Waco, Hewitt, Woodway, Temple, and all of Central Texas. Flat-rate pricing. 1-Year Workmanship Warranty."
+        primaryText="Call (254) 732-9100"
+        primaryLink="tel:+12547329100"
+        secondaryText="Free Estimate"
+        secondaryLink="/contact"
+      />
+      <div className={styles.section}>
+        <LocalServiceAreas
+          cityName="Waco"
+          areas={localAreas}
+          servicePath="services"
+          title="Plumbing Across Central Texas"
+        />
+      </div>
+      <div className={styles.section}>
+        <WhatToExpect
+          sectionTitle="What to Expect on Every Visit"
+          expectations={expectations}
+        />
+      </div>
+      <div className={styles.section}>
+        <FAQ cityName="Waco" faq={faq} title="Plumbing Service FAQs" />
+      </div>
+      <div className={styles.section}>
+        <BlogPreviewGrid />
+      </div>
       <div className={styles.section}>
         <Variant4
           title="Request Service or a Free Quote"
@@ -219,52 +256,6 @@ export default function HomePage() {
           formVariant={2}
         />
       </div>
-
-      <div className={styles.section}>
-        <ProcessTimeline steps={processSteps} />
-      </div>
-
-      <div className={styles.section}>
-        <Testimonials testimonials={reviews} />
-      </div>
-
-      <div className={styles.section}>
-        <GuaranteeSection />
-      </div>
-
-      <CTABanner
-        headline="Burst Pipe? Clogged Drain? We're Ready Right Now."
-        subline="Same-day appointments across Waco, Hewitt, Woodway, Temple, and all of Central Texas. Flat-rate pricing. 1-Year Workmanship Warranty."
-        primaryText="Call (254) 732-9100"
-        primaryLink="tel:+12547329100"
-        secondaryText="Free Estimate"
-        secondaryLink="/contact"
-      />
-
-      <div className={styles.section}>
-        <LocalServiceAreas
-          cityName="Waco"
-          areas={localAreas}
-          servicePath="services"
-          title="Plumbing Across Central Texas"
-        />
-      </div>
-
-      <div className={styles.section}>
-        <WhatToExpect
-          sectionTitle="What to Expect on Every Visit"
-          expectations={expectations}
-        />
-      </div>
-
-      <div className={styles.section}>
-        <FAQ cityName="Waco" faq={faq} title="Plumbing Service FAQs" />
-      </div>
-
-      <div className={styles.section}>
-        <BlogPreviewGrid />
-      </div>
-
     </main>
   );
 }

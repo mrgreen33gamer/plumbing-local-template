@@ -52,7 +52,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
 
-      {/* â”€â”€ TRUST STRIP â”€â”€ */}
+      {/* ── TRUST STRIP ── */}
       <div className={styles.trustStrip}>
         <div className={styles.trustInner}>
           {TRUST_ITEMS.map(({ icon, label }) => (
@@ -66,16 +66,16 @@ export default function Footer() {
             className={styles.trustCta}
             onClick={() => trackEvent({ eventType: 'click', elementLabel: 'Book Now', section: 'Footer-Trust' })}
           >
-            Book a Plumber Today â†’
+            Book a Plumber Today →
           </Link>
         </div>
       </div>
 
-      {/* â”€â”€ MAIN BODY â”€â”€ */}
+      {/* ── MAIN BODY ── */}
       <div className={styles.body}>
         <div className={styles.inner}>
 
-          {/* Col 1 â€” Brand */}
+          {/* Col 1 — Brand */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
               <span className={styles.logoMark}>
@@ -95,7 +95,7 @@ export default function Footer() {
             </Link>
 
             <p className={styles.tagline}>
-              Flat-rate pricing. Same-day service. Zero contracts â€” ever. Serving Central Texas homeowners since 2009.
+              Flat-rate pricing. Same-day service. Zero contracts — ever. Serving Central Texas homeowners since 2009.
             </p>
 
             <div className={styles.contactBlock}>
@@ -126,7 +126,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 â€” Nav */}
+          {/* Col 2 — Nav */}
           <div className={styles.col}>
             <span className={styles.colHead}>Company</span>
             <ul className={styles.linkList}>
@@ -134,14 +134,14 @@ export default function Footer() {
                 <li key={href}>
                   <Link href={href}
                     onClick={() => trackEvent({ eventType: 'click', elementLabel: label, section: 'Footer-Nav' })}>
-                    <span className={styles.linkArrow}>â€º</span>{label}
+                    <span className={styles.linkArrow}>›</span>{label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3 â€” Services */}
+          {/* Col 3 — Services */}
           <div className={styles.col}>
             <span className={styles.colHead}>Our Services</span>
             <ul className={styles.linkList}>
@@ -149,14 +149,14 @@ export default function Footer() {
                 <li key={href}>
                   <Link href={href}
                     onClick={() => trackEvent({ eventType: 'click', elementLabel: label, section: 'Footer-Services' })}>
-                    <span className={styles.linkArrow}>â€º</span>{label}
+                    <span className={styles.linkArrow}>›</span>{label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 4 â€” Service Areas */}
+          {/* Col 4 — Service Areas */}
           <div className={styles.col}>
             <span className={styles.colHead}>Service Areas</span>
             <ul className={styles.areaList}>
@@ -173,7 +173,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* â”€â”€ BOTTOM BAR â”€â”€ */}
+      {/* ── BOTTOM BAR ── */}
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
           <p className={styles.copyright}>

@@ -12,38 +12,50 @@ interface CTABannerProps {
   secondaryText?: string;
   secondaryLink?:  string;
   spot?:       string;
+  imageSrc?:   string;
+  eyebrow?:    string;
+  badgeA?: string;
+  badgeB?: string;
+  badgeC?: string;
 }
 
+/** ClearFlow  droplet motif, plumbing defaults */
 export default function CTABanner({
-  headline      = "Burst Pipe? Clogged Drain? We're Ready Right Now.",
-  subline   = "Same-day appointments available. Flat-rate pricing — no hidden fees. Call now or grab a free estimate online.",
+  headline      = "Leak, Clog, or No Hot Water?",
+  subline   = "Same-day appointments available. Flat-rate pricing  no hidden fees. Call now or grab a free estimate online.",
   primaryText  = "Call (254) 732-9100",
   primaryLink   = "tel:+12547329100",
   secondaryText = "Free Estimate",
   secondaryLink  = "/contact",
   spot = "CTABanner",
+  imageSrc,
+  eyebrow = "Central Texas Plumbers Since 2009",
+  badgeA = "No Contracts",
+  badgeB = "1-Yr Warranty",
+  badgeC = "Flat-Rate",
 }: CTABannerProps) {
   const trackEvent = useTrackEvent();
 
   return (
     <section className={styles.banner} aria-label="Call to action">
-      {/* Decorative grid lines */}
+      {imageSrc && (
+        <div className={styles.photoBg} aria-hidden="true">
+          <img src={imageSrc} alt="" className={styles.photoBgImg} />
+          <div className={styles.photoScrim} />
+        </div>
+      )}
+
       <div className={styles.grid} aria-hidden="true" />
 
-      {/* Rotating snowflake bg */}
       <motion.div
-        className={styles.bgFlake}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
+        className={styles.bgMotif}
+        animate={{ y: [0, 12, 0], opacity: [0.55, 0.9, 0.55] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
       >
-        <svg width="520" height="520" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round">
-          <line x1="12" y1="2" x2="12" y2="22"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <polyline points="8 6 12 2 16 6"/>
-          <polyline points="8 18 12 22 16 18"/>
-          <polyline points="6 8 2 12 6 16"/>
-          <polyline points="18 8 22 12 18 16"/>
+        {/* Water droplet  plumbing */}
+        <svg width="380" height="380" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.5C12 2.5 5 10.2 5 15a7 7 0 0 0 14 0c0-4.8-7-12.5-7-12.5z" />
         </svg>
       </motion.div>
 
@@ -57,7 +69,7 @@ export default function CTABanner({
         >
           <span className={styles.eyebrow}>
             <span className={styles.eyebrowDot} />
-            Central Texas Plumbing Experts Since 2009
+            {eyebrow}
           </span>
           <h2 className={styles.heading}>{headline}</h2>
           <p className={styles.sub}>{subline}</p>
@@ -95,15 +107,15 @@ export default function CTABanner({
           <div className={styles.badges}>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No Contracts
+              {badgeA}
             </span>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              1-Yr Warranty
+              {badgeB}
             </span>
             <span className={styles.badge}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Flat-Rate
+              {badgeC}
             </span>
           </div>
         </motion.div>

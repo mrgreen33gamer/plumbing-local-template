@@ -59,7 +59,7 @@ export default function Page() {
       <BlogHero
         title="7 Signs You Need Professional Drain Cleaning in Waco, TX"
         description="Slow sinks, gurgling toilets, and recurring clogs are early warnings. Learn when DIY is enough — and when Central Texas homeowners should call a plumber."
-        imageSrc="/pages/blogs/hvac-filter.jpg"
+        imageSrc="/pages/blogs/drain-cleaning.jpg"
         imageAlt="Signs you need professional drain cleaning in Waco TX"
         category="Drain Cleaning"
         date="February 18, 2026"

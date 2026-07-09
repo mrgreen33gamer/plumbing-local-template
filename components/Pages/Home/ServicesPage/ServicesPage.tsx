@@ -24,14 +24,12 @@ interface SectionProps {
 
 const ServicesPage: React.FC<SectionProps> = ({ direction, variants, handleDragEnd, handleAnimationComplete }) => {
   const services = [
-    // ✅ FIXED: All links updated to real App Router paths
-    { serviceTitle: 'Emergency Plumbing',           imgSrc: '/pages/home/services/web-design.png?v=1',              imgAlt: 'Emergency Plumbing Services',           pageLink: '/services/website-design' },
-    { serviceTitle: 'Fixture Installation',       imgSrc: '/pages/home/services/graphic-services.png?v=1',        imgAlt: 'Fixture Installation Services',       pageLink: '/services/fixture-installation' },
-    { serviceTitle: 'Data Engineering',     imgSrc: '/pages/home/services/data-services.png?v=1',           imgAlt: 'Data Engineering Services',     pageLink: '/services/software-engineering' },
-    { serviceTitle: 'Software Engineering', imgSrc: '/pages/home/services/software-services.png?v=1',       imgAlt: 'Software Engineering Services', pageLink: '/services/software-engineering' },
-    { serviceTitle: 'Mobile Apps',          imgSrc: '/pages/home/services/mobile-apps-services.png?v=1',    imgAlt: 'Mobile Apps Services',          pageLink: '/services/software-engineering' },
-    { serviceTitle: 'Sewer Line Repair',          imgSrc: '/pages/home/services/3d-modeling.png?v=3',             imgAlt: 'Sewer Line Repair Services',          pageLink: '/services/fixture-installation' },
-    { serviceTitle: 'Digital Marketing',    imgSrc: '/pages/home/services/digital-marketing-services.png?v=1', imgAlt: 'Digital Marketing Services', pageLink: '/services/marketing-solutions' },
+    { serviceTitle: 'Emergency Plumbing', imgSrc: '/pages/home/services/emergency.jpg',    imgAlt: 'Emergency plumbing',  pageLink: '/services/emergency-plumbing' },
+    { serviceTitle: 'Water Heaters',      imgSrc: '/pages/home/services/water-heater.jpg', imgAlt: 'Water heaters',       pageLink: '/services/water-heater-repair-install' },
+    { serviceTitle: 'Fixtures',           imgSrc: '/pages/home/services/fixture.jpg',      imgAlt: 'Fixture install',     pageLink: '/services/fixture-installation' },
+    { serviceTitle: 'Drain Cleaning',     imgSrc: '/pages/home/services/drain.jpg',        imgAlt: 'Drain cleaning',      pageLink: '/services/drain-cleaning' },
+    { serviceTitle: 'Leak Detection',     imgSrc: '/pages/home/services/pipes.jpg',        imgAlt: 'Leak detection',      pageLink: '/services/leak-detection-repair' },
+    { serviceTitle: 'Sewer Lines',        imgSrc: '/pages/home/services/repipe.jpg',       imgAlt: 'Sewer line repair',   pageLink: '/services/sewer-line-repair' },
   ];
 
   const numServices = services.length;
