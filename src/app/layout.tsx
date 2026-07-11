@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     siteName: "ClearFlow Plumbing",
     images: [
       {
-        url: `${BASE_URL}/logos/scott-apps-banner.png?v=1`,
+        url: `${BASE_URL}/pages/home/welcome/hero-main.jpg`,
         width: 1200,
         height: 630,
         alt: "ClearFlow Plumbing — Waco TX Plumbing Experts",
@@ -131,7 +131,7 @@ export const metadata: Metadata = {
     title: "ClearFlow Plumbing | Waco TX Plumbing Experts",
     description:
       "Emergency plumbing, water heaters, drain cleaning & sewer repair for Central Texas. Licensed Master Plumber — same-day response.",
-    images: [`${BASE_URL}/logos/scott-apps-banner.png?v=1`],
+    images: [`${BASE_URL}/pages/home/welcome/hero-main.jpg`],
   },
   robots: {
     index: true,
